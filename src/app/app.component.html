@@ -1,0 +1,309 @@
+<div style=" overflow-x: hidden; position: relative;" class="div-container" (scroll)="onScroll($event)">
+
+
+
+  <!-- Simulate a smartphone / tablet -->
+  <div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a routerLink="" class="active">HOME</a>
+      <div id="myLinks">
+        <a routerLink="nosotros">NOSOTROS</a>
+        <a routerLink="innovacion">INNOVACIÓN</a>
+        <a routerLink="biker-store" class="mobile-container-menu">BIKERSTORE</a>
+        <a routerLink="colab">MOTEO FT GZ</a>
+        <a routerLink="parches" class="mobile-container-menu">!QUE PARCHE!</a>
+        <a routerLink="promociones">PROMOCIONES</a>
+        <a (click)="form.open()">INICIA SESIÓN</a>
+        <a (click)="serach()">BUSQUEDA</a>
+        <a (click)="logOut()">CERRAR SESIÓN</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" (click)="menu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+
+    <!-- End smartphone / tablet look -->
+  </div>
+
+  <mat-sidenav-container style="overflow-x: hidden;">
+
+
+    <mat-sidenav-content style="height: auto; width: auto; overflow-x: hidden;">
+
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          <div class="row" style="background-color: #cc343c;">
+
+            <div class="col-md-12">
+              <div class="row" style="padding-top: 10px;">
+                <div class="col-md-10">
+                </div>
+                <div class="col-md-1">
+                  <img src="assets/images/finales/sesion moteo-01.png" (click)="form.open()" class="mobile">
+                </div>
+                <div class="col-md-1">
+
+
+                  <mat-icon matBadge="{{servicioGlobal.badgesProductos}}" style="color: white;" matBadgeSize="medium"
+                    matBadgePosition="after" (click)="abrirCarrito()">
+                    shopping_cart
+                  </mat-icon>
+
+
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <!--
+      <div class="dialog-sample">
+
+
+        <igx-dialog #form title="Inicio de sesión" style="color: #333333;" leftButtonLabel="Inicia Sesión"
+          (onLeftButtonSelect)="sesion(); form.close()" (onRightButtonSelect)="registroFinal(); form.close()"
+          rightButtonLabel="Crea tu cuenta" closeOnOutsideSelect="true">
+          <form [formGroup]="formSesion" class="signInForm">
+            <igx-input-group>
+              <igx-prefix>
+                <igx-icon>person</igx-icon>
+              </igx-prefix>
+              <label igxLabel for="username">Usuario</label>
+              <input igxInput id="username" formControlName="correo" type="text" />
+            </igx-input-group>
+            <igx-input-group>
+              <igx-prefix>
+                <igx-icon>lock</igx-icon>
+              </igx-prefix>
+              <label igxLabel>Password</label>
+              <input igxInput id="password" formControlName="password" type="password" />
+            </igx-input-group>
+          </form>
+        </igx-dialog>
+      </div>
+      <div class="dialog-sample">
+
+
+        <igx-dialog #registro title="Crea tu cuenta" leftButtonLabel="Cancel" style="width: 500px;"
+          (onLeftButtonSelect)="registro.close()" (onRightButtonSelect)="registroFinal()"
+          rightButtonLabel="Crear cuenta" closeOnOutsideSelect="true">
+
+        </igx-dialog>
+      </div>
+
+-->
+
+
+      <mat-sidenav-container style="overflow-x: hidden; background-color: white;" id="navbar">
+        <mat-sidenav-content id="grad" style="height: auto; width: 100%; overflow-x: hidden;">
+
+          <div class="row">
+
+
+            <div class="col-4" style="padding-left: 144px;">
+
+              <div id="logo" class="logo-imagen"></div>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="col-8" style="background-color: #cc343c; border-bottom-left-radius: 18px;">
+
+              <div class="container">
+                <div class="row" style="padding-top: 3%;">
+
+
+
+                  <div class="col-md-1">
+                  </div>
+                  <div class="col-md-1">
+
+                    <img src="assets/images/rayas.png" (click)="form.open()" class="mobile">
+
+                  </div>
+
+                  <div class="col-md-2" *ngIf="!servicioGlobal.home">
+                    <a routerLink=""><label style="color: white;" class="font-poppins-small"
+                        *ngIf="!servicioGlobal.home">Categorias </label></a>
+                  </div>
+                  <div class="col-md-2" *ngIf="servicioGlobal.home" style="padding-left: 50px;">
+                    <a routerLink=""><label class="activo">Categorias </label></a>
+                  </div>
+
+
+
+                  <div class="col-md-4" *ngIf="!servicioGlobal.nosotros">
+                    <a routerLink="nosotros"><label style="color: white;" class="font-poppins-small">Contacto
+                      </label></a>
+                  </div>
+
+                  <div class="col-md-4" *ngIf="servicioGlobal.nosotros">
+                    <a routerLink="nosotros"><label class="activo">Contacto
+                      </label></a>
+                  </div>
+
+
+
+                  <div class="col-md-4">
+                    <input matInput class="fields" placeholder="Buscar" type="text"
+                      style="max-width: 100%;" style="background-color: #eaeaea;" />
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+
+
+
+
+      <div class="container" class="fondo-gris"
+        *ngIf="servicioGlobal.sidebarVisibilityChange && servicioGlobal.bikerStoreFiltro">
+        <div class="row" style="padding-top: 1%; padding-left: 100px;">
+
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos"
+              (click)="cambiarFiltro(1,'Pantalones')">Pantalones
+            </label>
+          </div>
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos" (click)="cambiarFiltro(2,'Chamarras')">Chamarras
+            </label>
+          </div>
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos" (click)="cambiarFiltro(8,'Playeras')">Playeras
+            </label>
+          </div>
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos"
+              (click)="cambiarFiltro(3,'Backpacks&Bags ')">Backpacks&Bags </label>
+          </div>
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos" (click)="cambiarFiltro(11,'Maletas')">Botas
+            </label>
+          </div>
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos"
+              (click)="cambiarFiltro(10,'Backpacks')">Guantes</label>
+          </div>
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos"
+              (click)="cambiarFiltro(10,'Protecciones')">Protecciones
+            </label>
+          </div>
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos" (click)="cambiarFiltro(9,'Blindados')">Blindados
+            </label>
+          </div>
+
+          <div class="col">
+            <label style="color: black;" class="font-poppins-small-dos" (click)="cambiarFiltro(12,'Todos')">Todos
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+
+
+
+
+
+
+
+  <router-outlet></router-outlet>
+
+
+  <div style="background-color: #2b70a6; height: 30%; ">
+
+    <div class="row">
+      <div class="col-md-12">
+        <igx-navbar title="" actionButtonIcon="" (click)="entradaMenu()" [isActionButtonVisible]="true">
+
+        </igx-navbar>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col">
+          <b>
+            <p style="color: white">AYUDA</p>
+          </b>
+          <ul style="color: #dcd0d0;">
+            <li (click)="openPreguntas()">Preguntas Más Frecuentes</li>
+            <li>Contactenos</li>
+            <li>Envío y Entrega</li>
+            <li (click)="openPrivacidad()">Politica de Devolución</li>
+            <li>Términos y Condiciones</li>
+
+          </ul>
+        </div>
+
+
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+          <b>
+            <p style="color: white">SERVICIOS</p>
+          </b>
+          <ul style="color: #dcd0d0;">
+            <li>Garantía</li>
+            <li>Área de Prensa</li>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+
+
+          </ul>
+
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+  </div>

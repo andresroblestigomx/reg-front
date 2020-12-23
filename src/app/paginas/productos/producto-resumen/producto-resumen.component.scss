@@ -1,0 +1,49 @@
+hr {
+    color:  #f3583e;
+  }
+  
+
+  .registro-box{
+    font-weight: 300;
+    font-family: Avant;
+    background-image: linear-gradient(to right,#5AB6C9, #B6437E);
+    border-radius: 50px;
+    
+    padding: 15px;
+    .logged-box{
+        background-color: white;
+        border-width: 10px;
+        border-radius: 40px;
+    }
+}
+
+.imagen{
+
+    width: auto;
+    height: 240px;
+
+}
+
+.btn.btn-blue{
+    color:#fff;
+    background-color: #cc343c;;
+    width: 17%;
+}
+.registro-box .btn-blue{
+    color: white;
+    width: auto;
+}
+.btn.btn-blue:active, .btn.btn-blue:hover{
+    background-color:#2b70a6;
+
+}
+
+.fields-dos{
+    width: 50%;
+    height: 50%;
+    border: 1px solid #cc343c;
+    background-color:#f8f8f8;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: 'quick';
+  }

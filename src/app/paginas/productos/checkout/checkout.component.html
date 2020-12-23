@@ -1,0 +1,97 @@
+<div class="row">
+    <div class="col-md-5">
+        <img style="width: auto; height: auto;" src="../../../../assets/images/carrito.png">
+        <hr>
+    </div>
+    <div class="col-md-4" style="padding-top: 22px;">
+        <img (click)="borrar()" style="width: auto; height: auto;" src="../../../../assets/images/eliminar.png">
+    </div>
+
+</div>
+
+
+<div class="row" *ngIf="vistaTotales">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row" *ngFor="let producto of listaProductos">
+                <div class="col-md-1">
+
+
+                </div>
+                <div class="col-md-1">
+                    <img style="width: auto; height: auto;" src='assets/images/borrar.png' style="padding-top: 102px;">
+
+                </div>
+                <div class="col-md-3">
+                    <img class="imagen" src={{producto.url}}>
+
+                </div>
+
+                <div class="col-md-3" style="padding-top: 115px;">
+                    <label><strong>{{producto.nombre}}</strong></label>
+                </div>
+
+                <div class="col-md-2" style="padding-top: 115px;">
+                    <label style="color:  #cc343c;"><strong>{{producto.precio || currency}}</strong></label>
+                </div>
+                <div class="col-md-12" style="padding-top: 1%;">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr style="border-top: 1px dashed #cc343c; border-radius: 10px; width: 300px;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 22px;">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <label>Subtotal: {{subtotal || currency}}.00</label>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4">
+                    <label><strong>TOTAL: <label style="color: #cc343c;">&nbsp;&nbsp;&nbsp;{{total || currency}}.00</label></strong></label>
+                </div>
+
+                <div class="col-md-3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>*Todos nuestros percios ya incluyen IVA.</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button (click)="agregar(producto)" class="btn btn-blue">Pagar</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="row" *ngIf="!vistaTotales">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
+        <label><strong>No tienes productos agregados al carrito</strong></label>
+    </div>
+</div>
+
+<div class="row" *ngIf="!vistaTotales" style="padding-top: 30%">
+
+</div>

@@ -1,0 +1,280 @@
+// CSS Reset, comment out if not required or using a different module
+@import '~minireset.css/minireset';
+
+// Plus imports for other components in your app.
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+/* You can add global styles to this file, and also import other style files */
+
+@import "~igniteui-angular/lib/core/styles/themes/index";
+// Uncomment the following lines if you want to add a custom palette:
+// $primary: #731963 !default;
+// $secondary: #ce5712 !default;
+// $app-palette: igx-palette($primary, $secondary);
+
+/* autoprefixer grid: on */
+
+@include igx-core();
+@include igx-theme($default-palette);
+
+
+@-webkit-keyframes color-change-2x {
+    0% {
+        background: #fdf8f0;
+    }
+    100% {
+        background: #f6e7ec;
+    }
+}
+
+@keyframes color-change-2x {
+    0% {
+        background: #fdf8f0;
+    }
+    100% {
+        background: #f6e7ec;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+.myapp-no-padding-dialog .mat-dialog-container {
+  border-radius: 30px;
+  height: 600px;
+  width: 600px;
+
+  @media only screen and (max-width: 813px) {
+
+    width: 600px; 
+  
+    height: 350px;
+  
+  
+}
+}
+
+
+.myapp-no-padding-dialog-check .mat-dialog-container {
+  border-radius: 30px;
+  height: auto;
+  width: auto;
+  opacity: 0.9;
+
+  @media only screen and (max-width: 813px) {
+
+    width: 700px; 
+  
+    height: 350px;
+  
+  
+}
+}
+
+
+.myapp-no-padding-dialog-parche .mat-dialog-container {
+  border-radius: 30px;
+  height: 600px;
+  width: auto;
+  opacity: 0.9;
+
+  @media only screen and (max-width: 813px) {
+
+    width: 700px; 
+  
+    height: 350px;
+  
+  
+}
+}
+
+
+.container-final{
+
+  border-radius: 30px;
+  opacity: 0.9;
+
+}
+
+.container-final{
+
+  border-radius: 30px;
+  opacity: 0.9;
+
+}
+
+
+.fields{
+  width: 100%;
+  height: 50%;
+  border: 1px solid #f8f8f8;
+  background-color:#f8f8f8;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-family: 'quick';
+}
+
+
+
+.btn.btn-blue {
+  color: white;
+  background-color: #333;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'quick';
+  
+  }
+  
+  .btn.btn-blue:active,
+  .btn.btn-blue:hover {
+  color: white;
+  background-color: rgb(124, 124, 124);
+  border-color: grey;
+  }
+
+
+  .img-fluid-centro-dos{
+
+
+    height: 20px;
+}
+
+
+
+.button-dialog{
+
+  color: white;
+  background-color: #333;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: 'quick';
+
+}
+
+
+.button-dialog:active,
+.button-dialog:hover {
+  color: black;
+    background-color: rgb(233, 230, 235);
+    border-color: grey;
+}
+
+
+
+.container-final{
+
+  border-radius: 30px;
+  opacity: 0.9;
+
+}
+
+
+
+
+
+
+
+@font-face {
+    font-family: poppins;
+    src: url(assets/css/font/FUTURA-HEAVY-FONT.ttf)
+  }
+  
+  @font-face {
+    font-family: quick;
+    src: url(assets/css/font/FUTURA-LIGHT-BT.ttf)
+  }
+
+
+  .font-poppins{
+
+    font-family: 'poppins';
+  
+  }
+
+  .btn.btn-blue {
+    color: black;
+    background-color: #b4b4b4;
+    width: 50%;
+    opacity: 10px;
+    margin: auto;
+    
+    border-radius: 20px;
+    font-family: 'quick';
+    height: 20%;
+    
+  }
+  
+  .btn.btn-blue:active,
+  .btn.btn-blue:hover {
+    color: black;
+    background-color: rgb(233, 230, 235);
+    border-color: grey;
+  }
+  
+    
+  .font-poppins-letra{
+
+    font-family: 'poppins';
+    font-size: 26px;
+  
+  }
+  
+
+  .font-quick{
+  
+    font-family: 'quick';
+  
+  }
+
+
+  .imagen-final{
+
+    height: 45px; 
+    width: auto;
+
+  }
+
+$dark-navbar: igx-navbar-theme(
+    $text-color: #fff,
+    $background: #333333,
+    $idle-icon-color: #fff,
+    $hover-icon-color: gray
+);
+
+$input-group-theme: igx-input-group-theme(
+ 
+  $hover-bottom-line-color: linear-gradient(#000000 , #333333 ,#808080, 0.3 ),
+  $box-background: #040404
+);
+
+@include igx-navbar($dark-navbar);
+@include igx-input-group($input-group-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

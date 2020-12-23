@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-12" style="padding-top: 20px;">
+        <div align="left">
+            <button (click)="regresar()" class="btn btn-blue">Regresar</button>
+        </div>
+        <div align="center">
+
+            <img class="imagen" style="border: 5px solid #2b70a6; border-radius: 10px;" src={{producto.url}}>
+
+        </div>
+        <div align="center">
+            <strong>{{producto.nombre}}</strong>
+            <br>$ {{producto.precio || currency}} MXN
+            <br>
+            <label><strong>Descripción del producto</strong></label>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    {{producto.descripcion}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4" style="padding-top: 22px;">
+                    <input matIinput name="nombre" style="color: black;" class="fields-dos" type="number"
+                        formControlName="cantidad" placeholder="1" style="background-color: transparent;"
+                        appNumbersOnly />
+                </div>
+            </div>
+        </div>
+        <div align="center" style="padding: 20px;">
+
+            <button (click)="agregar(producto)" class="btn btn-blue">Añadir al carrito</button>
+
+
+        </div>
+    </div>
+</div>

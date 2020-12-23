@@ -1,0 +1,340 @@
+.textos{
+
+
+    font-size: 26px;
+    color: white;
+
+}
+
+.textosD{
+
+
+    font-size: 16px;
+    color: white;
+
+}
+
+
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+
+  .center {
+    margin: auto;
+    width: 500px;
+   
+    padding: 10px;
+  }
+
+
+  
+
+.dialog-sample {
+    min-width: 300px;
+}
+
+.signInForm {
+    padding: 12px 24px 24px;
+
+    igx-input-group + igx-input-group {
+        margin-top: 24px;
+    }
+}
+
+.center {
+    margin: auto;
+    width: 20%;
+    padding: 20%;
+  }
+
+  div.relative {
+    position: relative;
+    width: auto;
+    height: auto;
+
+  } 
+  
+  div.absolute {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+  }
+
+
+  .font-poppins{
+
+    font-family: 'poppins';
+  
+  }
+
+  .font-poppins-small{
+
+    font-family: 'poppins';
+    font-size: 12px;
+  
+  }
+
+  .font-poppins-small-dos{
+
+    font-family: 'poppins';
+    font-size: 12px;
+  
+  }
+
+  .font-poppins-small:hover{
+
+    font-family: 'poppins';
+    font-size: 12px;
+    color: red;
+    background-color: gray;
+  
+  }
+
+  .font-poppins-small-dos:hover{
+
+    font-family: 'poppins';
+    font-size: 12px;
+    color: red;
+    background-color: grey;
+  
+  }
+
+  .activo{
+
+      color: red;
+      font-family: 'poppins';
+      font-size: 12px;
+
+  }
+
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .img-fluid-centro-dos{
+
+
+      height: 20px;
+  }
+
+  
+.fondo-gris{
+
+  //background-image: url("../assets/images/fondo.png");
+  background-size: cover;
+
+}
+
+
+  .biker:hover{
+
+      visibility: show;
+  }
+
+  .img-fluid-centro-search{
+
+
+    height: 30px;
+    width: 30px;
+}
+
+  .logo-imagen{
+
+      height: auto;
+      width: auto;
+      content:url("../assets/images/reg.png");
+      padding-top: 2px;
+
+  }
+
+
+  .logo-imagen-barra{
+
+    height: auto;
+    width: auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    //background-image: url("../assets/images/logo-cuatro.png");
+    //content:url("../assets/images/logo-barra.png");
+
+}
+
+  
+  .logo-imagen-dos{
+
+    height: auto;
+    width: auto;
+    //background-image: url("../assets/images/logo-cuatro.png");
+    //content:url("../assets/images/trans-dos.png");
+
+}
+
+.logo-imagen-tres{
+
+  height: auto;
+  width: auto;
+  //background-image: url("../assets/images/logo-cuatro.png");
+  //content:url("../assets/images/logo-parche.png");
+
+}
+
+.logo-imagen-cuatro{
+
+  height: 20px;
+  width: 20px;
+  //background-image: url("../assets/images/logo-cuatro.png");
+  //content:url("../assets/images/logo-leather.png");
+
+}
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .igx-navbar{
+
+
+    background-color: linear-gradient(#000000 , #333333 ,#808080)
+
+
+  }
+
+  
+  
+
+
+  
+  .font-quick{
+  
+    font-family: 'quick';
+  
+  }
+
+  .fields{
+    width: 100%;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 15px;
+    padding: 10px 10px;
+    height: 30px;
+    background-color: rgb(131, 131, 131);;
+    color: grey;
+}
+
+
+
+  #grad {
+   
+  
+    @media only screen and (max-width: 813px) {
+
+        display: none;
+      
+    }
+  }
+
+
+  .mobile{
+
+    
+
+    @media only screen and (max-width: 813px) {
+
+      display: none;
+    
+  }
+
+
+  }
+
+
+
+  .div-container{
+
+    position: relative;
+
+  }
+
+  .mobile-container-menu {
+
+  
+
+    @media only screen and (max-width: 813px) {
+
+        display: none;
+
+    }
+
+  }
+
+  .mobile-container {
+   
+    display: none;
+
+    @media only screen and (max-width: 813px) {
+      max-width: 480px;
+      margin: auto;
+      background-color: #555;
+      height: 500px;
+      color: white;
+      border-radius: 10px;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      display: inline;
+
+      
+    }
+
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #040404;
+    color: white;
+  }
